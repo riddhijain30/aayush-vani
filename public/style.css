@@ -1,0 +1,137 @@
+:root {
+  --primary: #d9534f;
+  --primary-hover: #c9302c;
+  --bg-color: #fdfaf6;
+  --card-bg: #ffffff;
+  --text-dark: #222222;
+  --green: #2b8a3e;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #666;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.sos-button {
+  background-color: var(--primary);
+  color: white;
+  border: 6px solid #f5c6cb;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(217, 83, 79, 0.4);
+  transition: transform 0.2s, background-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.sos-button:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.sos-text {
+  font-size: 1.8rem;
+}
+
+.sos-subtext {
+  font-size: 0.75rem;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+.voice-controls {
+  margin-bottom: 25px;
+}
+
+.voice-btn {
+  background-color: #0275d8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.speech-output {
+  font-style: italic;
+  color: #555;
+  min-height: 20px;
+  margin-top: 10px;
+}
+
+.status-card {
+  background: var(--card-bg);
+  border: 2px solid var(--green);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.badge-free {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.ngo-note {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.ledger-section {
+  text-align: left;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.ledger-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.ledger-item {
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}

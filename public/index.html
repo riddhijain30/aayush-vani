@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AAYUSH VANI - Instant Senior Assistance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>आयुष वाणी (AAYUSH VANI)</h1>
+      <p class="subtitle">Single-Touch Emergency Healthcare Network</p>
+    </header>
+
+    <main>
+      <button id="sosBtn" class="sos-button" onclick="triggerSOS()">
+        <span class="sos-text"> आपातकालीन SOS </span>
+        <span class="sos-subtext"> PRESS OR SPOKEN VOICE HELP </span>
+      </button>
+
+      <div class="voice-controls">
+        <button id="micBtn" class="voice-btn" onclick="toggleVoice()">🎙 Speak Emergency (बोलें)</button>
+        <p id="speechOutput" class="speech-output">Listening... (Speak "Hospital", "Medicine", or "Help")</p>
+      </div>
+
+      <!-- Emergency Status Alert Card -->
+      <div id="statusCard" class="status-card hidden">
+        <h2 id="statusTitle">Emergency Dispatched!</h2>
+        <div class="status-body">
+          <p><strong>SOS Reference:</strong> <span id="sosId"></span></p>
+          <p><strong>Nearest Service Node:</strong> <span id="nodeName"></span></p>
+          <p><strong>Location:</strong> <span id="nodeAddr"></span></p>
+          <p class="badge-free">✔ Service First, Settle Later (₹0 Paid Upfront)</p>
+          <p class="ngo-note">Financial coverage absorbed by NGO Sponsor Ledger.</p>
+        </div>
+      </div>
+
+      <!-- Live NGO Ledger Display -->
+      <section class="ledger-section">
+        <h3>Live NGO Emergency Ledger Log</h3>
+        <ul id="ledgerList" class="ledger-list">
+          <li class="empty-state">No emergency requests triggered yet.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
