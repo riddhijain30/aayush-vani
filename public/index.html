@@ -3,44 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aayush Vani</title>
+  <title>AAYUSH VANI - Senior Emergency & Care Assistance</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>आयुष वाणी</h1>
-      <p class="subtitle">Single-Touch Emergency Healthcare Network</p>
+    <!-- Header with Comforting Banner -->
+    <header class="header-card">
+      <div class="header-badge">24/7 Zero-Friction Emergency Network</div>
+      <h1>आयुष वाणी (AAYUSH VANI)</h1>
+      <p class="subtitle">Comforting & Instant Emergency Medical Care for Seniors</p>
+      
+      <!-- Comforting Quote Card -->
+      <div class="quote-box" id="quoteBox">
+        <p id="quoteText">“You are never alone. Help is just a single touch away.”</p>
+      </div>
     </header>
 
     <main>
-      <button id="sosBtn" class="sos-button" onclick="triggerSOS()">
-        <span class="sos-text"> आपातकालीन SOS </span>
-        <span class="sos-subtext"> PRESS OR SPEAK FOR VOICE HELP </span>
-      </button>
-
-      <div class="voice-controls">
-        <button id="micBtn" class="voice-btn" onclick="toggleVoice()">🎙 Speak Emergency (बोलें)</button>
-        <p id="speechOutput" class="speech-output">Listening...</p>
-      </div>
-
-      <!-- Emergency Status Alert Card -->
-      <div id="statusCard" class="status-card hidden">
-        <h2 id="statusTitle">Emergency Dispatched!</h2>
-        <div class="status-body">
-          <p><strong>SOS Reference:</strong> <span id="sosId"></span></p>
-          <p><strong>Nearest Service Node:</strong> <span id="nodeName"></span></p>
-          <p><strong>Location:</strong> <span id="nodeAddr"></span></p>
-          <p class="badge-free">✔ Service First, Settle Later (₹0 Paid Upfront)</p>
-          <p class="ngo-note">Financial coverage absorbed by NGO Sponsor Ledger.</p>
+      <!-- Visual Banner -->
+      <div class="hero-image-container">
+        <div class="hero-overlay">
+          <span>Warm Care • Zero Upfront Cost • Rapid Dispatch</span>
         </div>
       </div>
 
-      <!-- Live NGO Ledger Display -->
+      <!-- Emergency Trigger Action Area -->
+      <section class="action-card">
+        <button id="sosBtn" class="sos-button" onclick="triggerSOS()">
+          <span class="sos-icon">🚨</span>
+          <span class="sos-text">आपातकालीन SOS</span>
+          <span class="sos-subtext">PRESS ONCE OR SPEAK BELOW</span>
+        </button>
+
+        <div class="voice-controls">
+          <button id="micBtn" class="voice-btn" onclick="toggleVoice()">🎙️ Speak Emergency (बोलकर मदद मांगें)</button>
+          <p id="speechOutput" class="speech-output">Tap above and say "Hospital", "Medicine", or "Ambulance"</p>
+        </div>
+
+        <!-- Quick Emergency Contacts Input -->
+        <div class="caregiver-input-group">
+          <label for="relativePhone">📱 Relative / Caregiver Phone (Optional SMS Notification):</label>
+          <input type="tel" id="relativePhone" placeholder="+91 98765 43210" value="+91 98765 43210">
+        </div>
+      </section>
+
+      <!-- Active Emergency Dispatch Alert Modal/Card -->
+      <section id="statusCard" class="status-card hidden">
+        <div class="status-header">
+          <span class="pulse-indicator"></span>
+          <h2 id="statusTitle">Emergency Help Dispatched!</h2>
+        </div>
+        <div class="status-body">
+          <p><strong>SOS Reference:</strong> <span id="sosId"></span></p>
+          <p><strong>Matched Node:</strong> <span id="nodeName"></span></p>
+          <p><strong>Location & Distance:</strong> <span id="nodeAddr"></span></p>
+          <p><strong>Direct Helpline:</strong> <span id="nodeContact"></span></p>
+          <p class="badge-free">✔ Service First, Settle Later (₹0 Paid Upfront)</p>
+          <p class="badge-caregiver" id="caregiverStatus">✔ Relative SMS Notification Sent</p>
+        </div>
+      </section>
+
+      <!-- Senior First-Aid Micro Guide -->
+      <section class="info-card">
+        <h3>💡 Quick First-Aid & Triage Advice for Seniors</h3>
+        <div class="first-aid-grid">
+          <div class="aid-card">
+            <h4>❤️ Chest Pain / Distress</h4>
+            <p>Sit upright comfortably. Loosen tight clothing. Stay calm while assistance is en route.</p>
+          </div>
+          <div class="aid-card">
+            <h4>🩸 Bleeding / Wounds</h4>
+            <p>Apply firm, direct pressure on the wound with a clean cloth. Elevate the area slightly.</p>
+          </div>
+          <div class="aid-card">
+            <h4>🧠 Sudden Dizziness / Weakness</h4>
+            <p>Sit down immediately to prevent falls. Sip small amounts of water slowly.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hyper-Local Network Nodes Demo Database -->
+      <section class="info-card">
+        <h3>📍 Active Partner Nodes Nearby (Demo Database)</h3>
+        <div id="nodesGrid" class="nodes-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </section>
+
+      <!-- Live NGO Emergency Ledger Log -->
       <section class="ledger-section">
-        <h3>Live NGO Emergency Ledger Log</h3>
+        <h3>📜 Live NGO Emergency Ledger (Service First Protocol)</h3>
         <ul id="ledgerList" class="ledger-list">
-          <li class="empty-state">No emergency requests triggered yet.</li>
+          <li class="empty-state">Loading live emergency log...</li>
         </ul>
       </section>
     </main>
